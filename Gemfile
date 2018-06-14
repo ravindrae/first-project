@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-gem 'rolify', :git => 'git://github.com/EppO/rolify.git'
+
+
 ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -37,6 +37,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
 gem 'sqlite3'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end

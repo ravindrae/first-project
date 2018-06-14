@@ -1,0 +1,10 @@
+<div class="dropdown">
+  <Button class="dropdown-toggle btn-block" data-toggle="dropdown" href="#">Your Articles
+    <span class="caret"></span>
+  </button>
+    <ul class="dropdown-menu btn-block">
+      <%@articles.each do |article|%>
+      <li class="btn btn-block"  style="text-align:left;"><%= link_to article.title,article_path(article),class:"btn-block"%></li>
+      <%end%>
+    </ul>
+</div>

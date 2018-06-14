@@ -1,0 +1,21 @@
+
+<body>
+<div class="well">
+    <h2> <%= @article.title.capitalize %></h2><br/>
+    <pre class=:text-justify>
+      <%= @article.text %>
+    </pre>
+</div>
+
+<% if user_signed_in?%>
+    <% if current_user.id == @article.user_id%>
+        <div class="btn-group btn-group-justified">
+          <%= link_to "Edit",edit_article_path(@article),class:"btn btn-primary"%>
+          <%= link_to "Delete",article_path(@article),method: :delete,class:"btn btn-warning" ,data:{confirm:"Are you sure"}%>
+        </div>
+    <%end%>
+    <%= render 'comments/comment'%>
+<%end%>
+<br>
+
+</body>

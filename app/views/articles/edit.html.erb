@@ -1,0 +1,10 @@
+
+<body>
+<%if user_signed_in?%>
+      <% if current_user.id == @article.user_id%>
+      <%= render 'form' %>
+    <%else%>
+      <div class="alert alert-warning">you can't update this article</div>
+    <%end%>
+<%end%>
+</body>

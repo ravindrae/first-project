@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_action :find_article
-  before_action :find_comment,only: [:destroy]
+  before_action :find_comment,only: [:destroy,:edit,:update]
   #before_action :owner ,only: [:destroy]
   def create
     @comment =@article.comments.create(comment_params)
@@ -17,7 +17,15 @@ class CommentsController < ApplicationController
     @comment.destroy
     redirect_to article_path(@article)
   end
-
+  def edit
+  end
+  def update
+    if @comment.update(comment_params)
+      redirect_to article_path(@article)
+    else
+      render "edit"
+    end
+  end
   private
   def find_article
     @article=Article.find(params[:article_id])

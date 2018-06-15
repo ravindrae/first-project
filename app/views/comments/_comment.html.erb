@@ -9,6 +9,7 @@
           <p style="font-size:15px;font-weight:bold;"><%= comment.content%></p>
           <%if current_user == comment.user || comment.article.user_id==current_user.id%>
           <%= link_to "Delete comment",[comment.article,comment],method: :delete%>
+          <%= link_to "Edit comment",edit_article_comment_path(comment.article,comment)%>
           <%end%>
         </div>
         <br/>

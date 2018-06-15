@@ -16,6 +16,7 @@
         <ul class="dropdown-menu">
           <li><%= link_to "Update profile",edit_user_registration_path%></li>
           <li><%= link_to "My articles",user_path(current_user.id)%></li>
+          <li><%= link_to "View profile",:action=>'show_prof',:controller=>'users'%></li>
         </ul>
       </li>
       <li><%= link_to "Log out",destroy_user_session_path,method: :delete,notice: "Logout successfully...!"%></li>

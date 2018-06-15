@@ -9,7 +9,7 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = 'e92bd1dd4c5bd26895d36e5eba907b93f35d4282fa1fe4ad8df16a78b4ca1bb7fbb89d5f9e34e49a1cc283cf4fc824d7c0923a896716b570d6cde8959c752996'
-  
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -58,7 +58,7 @@ Devise.setup do |config|
   # These keys will have whitespace before and after removed upon creating or
   # modifying a user and when used to authenticate or find a user. Default is :email.
   config.strip_whitespace_keys = [:email]
-
+config.secret_key = 'c0aadddf45fd1a565ea10b065f5d2d96ae9eda1a8ff6df2264974f489aa5d96858da36651094a0bc66ffce02e7d182bc33f8ec283dc455880d21604b31b382d6'
   # Tell if authentication through request.params is enabled. True by default.
   # It can be set to an array that will enable params authentication only for the
   # given strategies, for example, `config.params_authenticatable = [:database]` will

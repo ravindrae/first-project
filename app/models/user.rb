@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
          has_many :articles,:dependent =>:destroy
          has_many :comments,:dependent =>:destroy
-  validates :first_name,presence:true
-  validates :last_name, presence:true
+  validates :first_name,presence:true,format: { with: /\A[a-zA-Z ]+\z/,message: "only allows letters.......!" }
+  validates :last_name, presence:true,format: { with: /\A[a-zA-Z ]+\z/,message: "only allows letters.......!" }
   validates :email ,presence:true
   validates :encrypted_password,presence:true
 end

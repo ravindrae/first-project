@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 post 'responses/new'=> 'responses#new'
   get 'users/show' => 'users#show'
   get 'articles/index'
-  get 'users/show_prof'
+
+  get 'users/show_prof'=>'users#show_prof'
   devise_for :users
   resources :articles do
   resources :comments

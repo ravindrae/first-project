@@ -15,6 +15,19 @@
         </div>
     <%end%>
     <%= render 'comments/comment'%>
+    <%else%>
+    <h4 class="panel panel-info ">Responses</h4>
+      <%@comments.each do |comment|%>
+        <div class="inputgroup">
+          <span class="col-sm-2"><i class="glyphicon glyphicon-user"></i></span>
+          <div class="col-sm-10">
+            <p style="font-size:10px;"><%=User.find(comment.user_id).first_name.capitalize%></p>
+            <p style="font-size:10px;"><i><%=comment.created_at%></i></p>
+            <p style="font-size:15px;font-weight:bold;"><%= comment.content%></p>
+          </div>
+          <br/>
+        </div>
+      <%end%>
 <%end%>
 <br>
 

@@ -4,6 +4,5 @@ class UsersController < ApplicationController
     @articles=@user.articles
   end
   def show_prof
-    @user=current_user
   end
 end

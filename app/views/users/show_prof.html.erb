@@ -1,16 +1,16 @@
 <div class="panel panel-primary">
   <div class="panel-heading">Personal details</div>
-  <div class="panel-body"><b>Name: </b><%=@user.first_name.capitalize+" "+@user.last_name.capitalize%></div>
-  <div class="panel-body"><b>Email: </b><%=@user.email%></div>
-  <div class="panel-body"><b>Date Of Birth: </b><%=@user.dateofbirth%></div>
+  <div class="panel-body"><b>Name: </b><%=current_user.first_name.capitalize+" "+current_user.last_name.capitalize%></div>
+  <div class="panel-body"><b>Email: </b><%=current_user.email%></div>
+  <div class="panel-body"><b>Date Of Birth: </b><%=current_user.dateofbirth%></div>
 </div>
 </div>
 <div class="container">
 <div class="panel panel-info">
   <div class="panel-heading">Sign in details</div>
-    <div class="panel-body"><b>Current sign_in at: </b><%=@user.current_sign_in_at%></div>
-  <div class="panel-body"><b>Last sign_in at: </b><%=@user.last_sign_in_at%></div>
-  <div class="panel-body"><b>Sign_in count: </b><%=@user.sign_in_count%></div>
+    <div class="panel-body"><b>Current sign_in at: </b><%=current_user.current_sign_in_at%></div>
+  <div class="panel-body"><b>Last sign_in at: </b><%=current_user.last_sign_in_at%></div>
+  <div class="panel-body"><b>Sign_in count: </b><%=current_user.sign_in_count%></div>
 </div>
 </div>
 </div>

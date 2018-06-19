@@ -7,8 +7,10 @@
           <p style="font-size:10px;"><%=User.find(comment.user_id).first_name.capitalize%></p>
           <p style="font-size:10px;"><i><%=comment.created_at%></i></p>
           <p style="font-size:15px;font-weight:bold;"><%= comment.content%></p>
-          <%if current_user == comment.user || comment.article.user_id==current_user.id%>
+          <%if can? :destroy,comment%>
           <%= link_to "Delete comment",[comment.article,comment],method: :delete%>
+          <%end%>
+          <%if can? :update,comment%>
           <%= link_to "Edit comment",edit_article_comment_path(comment.article,comment)%>
           <%end%>
         </div>

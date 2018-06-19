@@ -1,4 +1,4 @@
-
+<%if can? :update,@comment%>
 <%= form_for([@article,@comment]) do |f| %>
   <div class="form-group">
     <span class="col-sm-2 gpc" style="width:30px"><i class="glyphicon glyphicon-user"></i></span>
@@ -8,4 +8,7 @@
     </div>
   </div>
 <br/>
+<%end%>
+<%else%>
+  <div class="alert alert-warning">you can't update this comment</div>
 <%end%>

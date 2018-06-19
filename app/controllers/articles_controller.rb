@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 before_action :authenticate_user!,except:[:show ,:index]
-before_action :find_a,only:[:show,:edit,:update,:destroy]
+before_action :find_article,only:[:show,:edit,:update,:destroy]
 #before_action :authenticate_user
   def index
     @articles=Article.all
@@ -44,13 +44,13 @@ before_action :find_a,only:[:show,:edit,:update,:destroy]
     @article.destroy
     redirect_to articles_path
   end
-  
+
   private
   def article_params
     params.require(:article).permit(:title, :text, :email)
   end
 
-  def find_a
+  def find_article
     @article = Article.find(params[:id])
   end
 end

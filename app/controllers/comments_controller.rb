@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
   def create
     @comment =@article.comments.create(comment_params)
     @comment.user_id = current_user.id
-    @comment.save
+
     if @comment.save
       redirect_to article_path(@article)
     else
@@ -36,9 +36,5 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:comment).permit(:content)
   end
-  #def owner
-  #  unless current_user.id == @comment.user_id
-  #    flash[:notice]="You shall not delete"
-  #    redirect_to @article
-  #end
+
 end

@@ -11,9 +11,9 @@
 
     <%@articles.each do |article| %>
       <div class="jumbotron sjb">
-        <h3><%=article.title.capitalize%></h3>
+        <h3><%=capital(article.title)%></h3>
         <h6><i>Written by:</i></h6>
-        <h5><%=article.user.first_name.capitalize+" "+article.user.last_name.capitalize%></h5>
+        <h5><%=full_name(article)%></h5>
         <h6><i>Date:<%=article.created_at%></i></h6>
         <%= link_to "Show",article_path(article),class:"btn cbtn btn-lg btn-block"%>
       </div>
@@ -26,9 +26,9 @@
       </div>
       <%@articles.each do |article| %>
           <div class="jumbotron sjb">
-                <h3><%=article.title.capitalize%></h3>
+                <h3><%=capital(article.title)%></h3>
                 <h6><i>Written by:</i></h6>
-                <h5><%=article.user.first_name.capitalize+" "+article.user.last_name.capitalize%></h5>
+                <h5><%=full_name(article)%></h5>
                 <h6><i>Date:<%=article.created_at%></i></h6>
                 <%= link_to "Show",article_path(article),class:"btn cbtn btn-lg btn-block"%>
           </div>

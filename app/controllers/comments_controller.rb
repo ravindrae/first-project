@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :find_article
+  before_action :find_article,only: [:create,:destroy,:update,:edit]
   before_action :find_comment,only: [:destroy,:edit,:update]
   #before_action :owner ,only: [:destroy]
   def create

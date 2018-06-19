@@ -9,11 +9,10 @@ before_action :find_article,only:[:show,:edit,:update,:destroy]
   def show
    #@article = Article.find(params[:id])
    @comments=Comment.where(article_id: @article).order("created_at DESC")
-   @c=Comment.where(article_id:@article).count
   end
 
   def new
-  @article=current_user.articles.build
+  @article=Article.new
   end
 
   def edit
@@ -21,7 +20,9 @@ before_action :find_article,only:[:show,:edit,:update,:destroy]
   end
 
   def create
-  @article =current_user.articles.build(article_params)
+#  @article =current_user.articles.build(article_params)
+  @article=Article.new(article_params)
+  @article.user_id=current_user.id
 
   if @article.save
     redirect_to @article

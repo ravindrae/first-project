@@ -47,6 +47,11 @@
   </div>
 
   <div class="form-group">
+    <%=f.label :upload_image %>
+    <%=f.file_field :profile_image,class:"form-control"%>
+  </div>
+
+  <div class="form-group">
     <%=f.label :address %>
     <%=f.text_area :address, autofocus: true ,class:"form-control"%>
   </div>

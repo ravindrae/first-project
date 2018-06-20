@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -71,3 +71,4 @@ gem 'cancan', '~> 1.6', '>= 1.6.10'
 gem 'rspec-rails'
 gem 'rails_default_value'
 gem 'carrierwave', '~> 1.0'
+gem 'image_magick','~>0.1.9'

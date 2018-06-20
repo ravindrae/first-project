@@ -1,7 +1,7 @@
 
 <div class="panel panel-primary">
   <div class="panel-heading">Personal details</div>
-  <%=image_tag(current_user.profile_image.url(:thumb),alt:current_user.first_name)%>
+
   <div class="panel-body"><b>Name: </b><%=current_user.first_name.capitalize+" "+current_user.last_name.capitalize%></div>
   <div class="panel-body"><b>Email: </b><%=current_user.email%></div>
   <div class="panel-body"><b>Date Of Birth: </b><%=current_user.dateofbirth%></div>
